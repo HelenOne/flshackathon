@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Wheel from './components/Wheel.jsx';
+import { Switch, Link, Route, useParams  } from "react-router-dom";
+import Field from './components/Field';
+import ToDo from './components/ToDo';
+import {Menu} from 'antd';
+import "antd/dist/antd.css";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu className="navigation" mode="horizontal">
+        <Menu.Item>
+          <Link to="/"> Wheel </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/toDo">ToDo</Link>
+        </Menu.Item>
+      </Menu>
+
+      <Switch>
+        <Route exact path="/" component={Wheel} />
+        <Route path="/toDo/:id" component={ToDo} />
+        {/* <Route path="/toDo" component={AllToDo} /> */}
+        <Route component={() => "Page not found"} />
+        {/* <Route path="/toDo/:id" component={toDo} /> */}
+      </Switch>
     </div>
   );
 }

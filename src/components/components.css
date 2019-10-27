@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
+.circle {
+    opacity: .5;
+}
+
+ul {
+    list-style: none;
+}
+
+.field-name {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    /* fill: white; */
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;  
+}
+.field-name:hover {
+    fill: white;
+}
+
+svg {
+    margin-top: 20px;
+}
+
+/* toDO block */
+
+.toDoBlock {
+    margin-top: 20px;
+}
+
+.FieldNameToDo {
+    font-size: 24px;
+}
+.toDoWrapper {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.toDoBlock ul {
+    align-items: center;
+}
+.toDoBlock li {
+    max-width: 200px;
+    text-align: left;
+    margin: 0;
+}
+
+.ant-dropdown-link {
+    margin-left: 20px;
+}
