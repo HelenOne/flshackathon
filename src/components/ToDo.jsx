@@ -86,20 +86,23 @@ export default observer(
           
           <div className="toDoWrapper">
             <ul>
-              {store.todos[this.props.match.params.id].map(value => (
-                <li key={value.title}>
-                  <Checkbox checked = {false}
+              {store.todos[this.props.match.params.id].map((value, index) => (
+                <li key={value.title} className={value.toDelete ? 'todo-item deleting' : 'todo-item'}>
+                  <Checkbox 
                     onChange={event => {
+                      store.todos[this.props.match.params.id][
+                        index
+                      ].toDelete = true;
                       axios
                         .delete(
                           `https://cors-anywhere.herokuapp.com///84.201.154.32:8000/api/wheel/${this.props.match.params.id}/${value.id}`
                         )
                         .then(res => {
-                          store.todos[this.props.match.params.id] = store.todos[
+                         setTimeout(() => {store.todos[this.props.match.params.id] = store.todos[
                             this.props.match.params.id
                           ].filter(obj => {
                             return obj.id !== value.id;
-                          });
+                          });}, 800)
                         });
                     }}
                   >

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
 
 .circle {
     opacity: .5;
@@ -10,7 +13,7 @@ ul {
 }
 
 .field-name {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Righteous', cursive;
     font-size: 16px;
     /* fill: white; */
     cursor: pointer;
@@ -23,8 +26,12 @@ ul {
 }
 
 svg {
-    margin-top: 20px;
+    margin-top: 80px;
 }
+
+/* svg path {
+  transform: scale(0.9);
+} */
 
 /* toDO block */
 
@@ -36,7 +43,7 @@ svg {
     font-size: 24px;
 }
 .toDoWrapper {
-    width: 400px;
+    width: 420px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -48,9 +55,26 @@ svg {
 .toDoBlock li {
     max-width: 200px;
     text-align: left;
-    margin: 0;
+    margin-right: 0;
 }
 
 .ant-dropdown-link {
     margin-left: 20px;
+}
+
+.todo-item {
+  position: relative;
+  left: 0;
+  max-height: 200px;
+  opacity: 1;
+  transition: 0.3s all;
+}
+.todo-item.deleting {
+  opacity: 0;
+  max-height: 0;
+  left: 40px;
+}
+
+.AllToDoUl {
+    margin-top: 40px;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
 .App {
   text-align: center;
 }
@@ -17,4 +19,11 @@
   color: #09d3ac;
 }
 
+.mainTitle {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+}
 

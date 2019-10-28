@@ -22,7 +22,7 @@ export default observer(
             <Menu.Item key="day"> 1 day </Menu.Item>
             <Menu.Item key="week">1 week</Menu.Item>
             <Menu.Item key="month">1 month</Menu.Item>
-            <Menu.Item key="seconds"> 15 seconds </Menu.Item>
+            <Menu.Item key="seconds"> 5 seconds </Menu.Item>
           </Menu>
         );
         let time = "";

@@ -63,7 +63,7 @@ export default observer(
               d={`M ${radius} ${radius}
               L ${radius + radius * Math.cos((index * 2 * Math.PI) / n)} 
                 ${radius - radius * Math.sin((index * 2 * Math.PI) / n)}
-              A ${radius} ${radius}, 0, 0, 0, ${radius +
+              L  ${radius +
                 radius * Math.cos(((index + 1) * 2 * Math.PI) / n)} 
                 ${radius - radius * Math.sin(((index + 1) * 2 * Math.PI) / n)}
               Z`}
@@ -89,7 +89,7 @@ export default observer(
                 radius * filling[index] * Math.cos((index * 2 * Math.PI) / n)}
                 ${radius -
                   radius * filling[index] * Math.sin((index * 2 * Math.PI) / n)}
-              A ${radius} ${radius}, 0, 0, 0, ${radius +
+              L  ${radius +
                   radius *
                     filling[index] *
                     Math.cos(((index + 1) * 2 * Math.PI) / n)}
@@ -104,7 +104,7 @@ export default observer(
               <text
               x={
                 radius -
-                40 +
+                30 +
                 radius * 0.8 * Math.cos(((index + 0.5) * 2 * Math.PI) / n)
               }
               y={
